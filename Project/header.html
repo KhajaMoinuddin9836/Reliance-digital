@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+</head>
+<style>
+    #header{
+    width:100%;
+    height: 100px;
+    background-color: rgb(228,37,41);
+    
+}
+.logincart>img{
+    height:20px;
+    background-color: whitesmoke;
+}
+.logincart{
+  display:flex;
+}
+.middlebox{
+    
+    margin:5px;
+    height:65px;
+    display: flex;
+    align-items: center;
+    
+}
+.reliancelogo{
+    width:150px;
+    
+    margin-left: 60px;
+}
+#searchbar{
+    margin-left: 200px;
+    
+    display: flex;
+}
+#searchbar>input{
+  height: 37px;
+  width:400px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border: none;
+  border:transparent;
+  
+}
+#searchbar>button{
+    background-color:rgb(52, 47, 47);
+    height:38px;
+    width:90px;
+    border:none;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logincart{
+    display:flex;
+    align-items: center;
+    margin-left: 275px;
+    
+    
+
+}
+.lgp{
+    margin-left: 10px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.location{
+    height:20px;
+    border:none;
+}
+.store{
+    
+    height: 25px;
+    
+    display:flex;
+    margin-left: 10px;
+    color:whitesmoke;
+    align-items: center;
+    
+    justify-content: flex-end;
+    
+    }
+    .locationlogo{
+        height:20px;
+        
+    }
+    .position{
+        margin-right: 20px;
+        align-content: flex-end;
+        
+    }
+    #dropdown ul{
+            display: flex;
+            justify-content: space-between;
+      }
+        
+        #popupdiv{
+            height: 300px;
+            width: 90%;
+            border: 1px solid black;
+            margin: auto;
+            display: none;
+            position: absolute;
+            background-color: rgb(15,74,137);
+        }
+      
+        
+        
+        .toggledisp{
+            display: none;
+        }
+        .toggledisp>div{
+            display: flex;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        #dropdown{
+            border:1px solid rgb(31,73,133);
+            height:38px;
+            background-color: rgb(31,73,133);
+        }
+        #dropdown>ul{
+            color:whitesmoke;
+            list-style: none;
+        }
+        .toggledisp>div>div>ul{
+            list-style: none;
+            color: whitesmoke;
+        }
+        #mobandtab>div>ul>a{
+            color:whitesmoke;
+            text-decoration: none;
+            
+        }
+        .toggledisp>div>div>ul>li{
+            margin-bottom: 8px;
+        }
+      
+    
+          
+
+
+
+
+</style>
+<body>
+    <div id="header">
+         <div class="store">
+            <img src="data:image/jpeg;base64,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" alt="" class="locationlogo">
+            <p class="position">Find a store</p>
+            <p class="position">Buying Guides</p>
+            <p class="position">Contact Us</p>
+        </div>
+        <div class="middlebox">
+            <div class="reliancelogo">
+                <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg" alt="">
+            </div>
+            <div id="searchbar">
+                <input type="search" placeholder="Find Your favorite Products">
+                 <button>Search</button>
+                </div>
+                 <div class="logincart">
+            <img src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png" alt="" class="lgp">
+            <p class="lgp">Cart</p>
+            <img src="https://simg.nicepng.com/png/small/136-1366211_group-of-10-guys-login-user-icon-png.png" alt="" class="lgp">
+            <p class="lgp">Login</p>
+        </div>
+        </div>
+       
+
+       
+       
+       
+       
+    </div>
+    <div id=dropdown>
+        <ul>
+            <li id="mt">MOBILE & TABLETS</li>
+            <li id="ta">TV & AUDIO</li>
+            <li id="ha">HOME APPLIANCES</li>
+            <li id="co">COMPUTERS</li>
+            <li id="ca">CAMERAS</li>
+            <li id="ka">KITCHEN APPLIANCES</li>
+            <li id="pc">PERSONAL CARE</li>
+            <li id="ac">ACCESSORIES</li>
+        </ul>
+        </div>
+​
+        <div id="popupdiv">
+            <div id="toggle1" class="toggledisp">
+                <div id="mobandtab">
+                    <div>
+                        <ul>
+                            <a href="./product.html"><li class="bold">Smartphone</li></a>
+                            <li>Accessories</li>
+                            <li>Apple Accessories</li>
+                            <li> Mobile Accessories</li>
+                            <li>Tublet Accessories</li>
+                            <li>Docking Accessories</li>
+                            <li>Mobile Grips & standa</li>
+                        </ul>                            
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Smart and Wearbales</li>
+                            <li>Trending Smart Watches</li>
+                        </ul>
+                    </div>                        
+                </div>
+            </div>
+            <div id="toggle2" class="toggledisp">
+                <div id="tel&aud">
+                    <div>
+                        <ul>
+                            <li class="bold">Telivisions</li>
+                            <li>Smart Tv</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Speciality Speakers</li>
+                            <li class="bold">Gaming</li>
+                            <li>Gaming Consoles</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Reconnect Disney | Marvel Audio Collection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="toggle3" class="toggledisp">
+                <div id="homapp">
+                    <div>
+                        <ul>
+                            <li class="bold">Air conditioning</li>
+                            <li>Split Air Conditioners</li>
+                               <li>Window Air Conditioners</li> 
+                               <li> Smart Air Conditioners</li>
+                               <li> Energy Efficient Air Conditioners</li>
+                               <li> 1 ton Air Conditioners</li>
+                               <li> 1.5 ton Air Conditioners</li>
+                               <li> 1.5 ton Air Conditioners</li>
+                                </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Washing Machines</li>
+                               <li>Fully Automatic Front Load</li>
+                               <li> Fully Automatic Top Load</li>
+                               <li>Semi-Automatic Top Load</li>
+                               <li>Washing Machine Detergents & Liquids</li>
+                             </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Dish washers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="toggle4" class="toggledisp">
+                <div id="comp">
+                    <div>
+                        <ul>
+                            <li class="bold">Laptop</li>
+                            <li>Basic use laptops</li>
+                            <li> Student Laptops</li>
+                            <li> Thin and light Laptops</li>
+                            <li> Multi-Tasking Laptops</li>
+                            <li> Gaming Laptops</li>
+                            <li> Content creator Laptops</li>
+                    </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Bluetooth & WiFi Speakers</li>
+                            <li class="bold">Internet Connectivity Devices</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Computer Accessories</li>
+                            <li>Computer Networking Cables</li>
+                            <li>Laptop Chargers & Adaptor</li>
+                            <li>Laptop Bags & Sleeves</li>
+                            <li>Laptop Cooling Pad</li>
+                            <li>Laptop Screen Protectors</li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="toggle5" class="toggledisp">
+                <div id="cam">
+                    <div>
+                        <ul>
+                            <li class="bold">DSLR Cameras</li>
+                            <li>Mirrorless Cameras</li>
+                            <li>Point & Shoot Cameras</li>
+                            <li>ProSumer Cameras</li>
+                            <li>Action Cameras</li>
+                             </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Digital Camera Accessories</li>
+                            <li>Camera Batteries & Chargers</li>
+                            <li>Camera bags & cases</li>
+                            <li>Tripods & Monopods</li>
+                            <li>Action Camera Accessories</li>
+                    </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="toggle6" class="toggledisp">
+                <div id="kitchapp">
+                    <div>
+                        <ul>
+                            <li class="bold">Microwave Ovens</li>
+                            <li class="bold"> Water Purifiers</li>
+                            <li class="bold">Fruits and Vegetable Cleaner</li>
+                            <li class="bold">Oven Toaster Grillers (OTG)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Induction Cookers</li>
+                            <li class="bold">Food Processors</li>
+                            <li class="bold">Blenders</li>
+                            <li class="bold">Kitchen Hobs & Gas Stoves</li>
+                         </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold"> Specialty Appliances</li>
+                            <li>Electric Kettles</li>
+                            <li>Water Dispensers</li>
+                            <li>Wet Grinders</li>
+                           </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="toggle7" class="toggledisp">
+                <div id="percare">
+                    <div>
+                        <ul>
+                            <li class="bold">Shavers and Trimmers</li>
+                            <li class="bold"> Epilators</li>
+                            <li class="bold">Hair Dryers & Stylers</li>
+                            <li class="bold">Irons</li>
+                         </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li> Reconnect Disney|Marvel Grooming Collection</li>
+                            <li>Hygiene & Personal Care</li>
+                            <li>Digital Thermometers</li>
+                            </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="toggle8" class="toggledisp">
+                <div id="acces">
+                    <div>
+                        <ul>
+                            <li class="bold">Bags Cases & Sleeves</li>
+                            <li class="bold">Smart Devices</li>
+                            <li>Smart Plugs</li>
+                            <li>Smart Cameras</li>
+                            <li>Smart Sensors</li>
+                            <li>Smart Lights</li>
+                            <li>Smart Speakers</li>
+            </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">Reconnect Disney | Marvel Accessories</li>
+                            <li class="bold">Memory Cards</li>
+                            <li class="bold">Mounts & Stands</li>
+                            <li class="bold">Pen Drives</li>
+                            <li class="bold">Routers</li>
+                     </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="bold">External Hard Disks</li>
+                            <li class="bold">Headphones & Headsets</li>
+                            <li class="bold">Keyboards</li>
+                            <li class="bold">Indoor Lighting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+   
+</body>
+</html>
+<script src="./scripts/header.js"></script>

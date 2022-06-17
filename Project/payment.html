@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <style>
+      .collapsible {
+        
+        color: #737478;
+        cursor: pointer;
+        padding: 18px;
+        width: 80%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 15px;
+        border-radius: 10px;
+        }
+        .active, .collapsible:hover {
+            background-color: #e42529;
+            color: white;
+        }
+        .content {
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         /* padding: 18px; */
+        display: none;
+        overflow: hidden;
+        width: 80%;
+        background-color: white;
+        }
+        .content p{
+            text-align: center;
+        }
+        #paym{
+            display: flex;
+        }
+        input{
+            margin: 10px;
+        }
+        #pay{
+            width: 60%;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <button class="collapsible">DELIVERY METHOD</button>
+    <div class="content">
+        
+        <div>
+            <p>SHIPPING ADDRESS</p><P>PICK AT STORE</P>
+            <input type="text" placeholder="Address1"><br>
+            <input type="text" placeholder="Address2"><br>
+            <input type="text" placeholder="Pincode"><br>
+            <div>
+                <p>Select Delivery Method</p>
+                <p><input type="checkbox" id="">INSTA DELIVERY</p>
+                <p><input type="checkbox" id="">STANDARD DELIVERY</p>
+
+                <p>*Note:  Either your PIN code or some items in your Order are not eligible for INSTA Delivery.</p>
+                <p>*Delivery assurance is subject to our delivery locations staying open as per govt. regulations</p>
+                <p>*Please Note:</p>
+                <ol>
+                    <li>OTP is required for delivery completion.</li>
+                    <li> For additional information, refer T&C's</li>
+                </ol>
+            </div>
+            <p>Need GST Invoice? click Here</p>
+        </div>
+        <button>DELIVER HERE</button>
+        <button>ADD NEW SHIPPING ADDRESS</button>
+    </div>
+
+
+    
+
+
+    <button class="collapsible">PAY SECURELY</button>
+    <div class="content">
+        <P>Offer on Card</P>
+        <p> Upto Rs. 5000 Instant Discount with HDFC Bank Credit Cards T&C</p>
+        <p>Other Offers</p>
+        <p>10% Cashback on EMI transactions with ZestMoney T&C</p>
+        <p>Get up to Rs 350 cashback from Mobikwik T&C</p>
+        <p>Applicable for orders lesser than Rs. 20,000. Pay later with Simpl & avail 10% cashback.  T&C</p>
+         
+        <div id="payoption">
+            <h1>Payment Option</h1>
+            <div id="paym">
+                
+
+                <div>
+                    <div>
+                        <input type="checkbox" id="">
+                        Credit Card
+                    </div>
+                    <div>
+                        <input type="checkbox" id="">
+                        Debit Card
+                    </div>
+                    <div>
+                        <input type="checkbox" id="">
+                        Credit Card EMI
+                    </div>
+                    <div>
+                        <input type="checkbox" id="">
+                        Net Banking
+                    </div>
+                    <div>
+                        <input type="checkbox" id="">
+                        UPI
+                    </div>
+                    <div>
+                        <input type="checkbox" id="">
+                        Wallet
+                    </div>
+                </div>
+    
+                <div id="carddetails">
+                    <input type="number" placeholder="Enter card number"><br>
+                    <input type="number" placeholder="Enter CVV"><br>
+                    <input type="month" >
+                </div>
+            </div>
+            
+
+            <div>
+                
+                <button id="pay"> ......</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer></footer>
+</body>
+</html>
+
+<script type="module">
+
+import {footer,header} from "./components/header_footer.js"
+    let container=document.getElementById("container")
+    container.innerHTML=header()
+    let foot=document.querySelector("footer")
+    foot.innerHTML=footer()
+
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
+let items=JSON.parse(localStorage.getItem("relianceCart"))
+
+
+let pay=document.getElementById("pay")
+pay.innerText="PAY RS."+items.price
+pay.addEventListener("click",pop)
+function pop(){
+    alert("Pay Success\n your order will be delivered\n thank you!!!")
+    
+}
+
+</script>

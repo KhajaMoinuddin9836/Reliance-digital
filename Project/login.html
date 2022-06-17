@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <title>Document</title>
+</head>
+<style>
+    #container1{
+        border:1px solid silver;
+        border-radius: 8px;
+        height:400px;
+        width:1000px;
+        margin:auto;
+        margin-top: 90px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+    }
+    .login{
+        color: black;
+        font-weight: bolder;
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    form{
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+    label{
+        color:black;
+    }
+    input{
+        height:37px;
+        width:400px;
+    }
+    #forgot>p{
+        margin-left: 320px;
+        font-weight: bolder;
+    }
+    button{
+        color:whitesmoke;
+        font-weight: bolder;
+        height:39px;
+        width:410px;
+        margin-left: 30px;
+        background-color: teal;
+        font-size: 20px;
+        border:none;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+    #char{
+        display: flex;
+        justify-content: center;
+         width:440px;
+    }
+    .reg{
+        color:rgb(228, 37, 218);
+        margin-left: 8px;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+    
+         
+         #main{
+             display:flex;
+         }
+         .box2{
+             
+             height:300px;
+             width:200px;
+             margin-left: 180px;
+             justify-content: center;
+         }
+         .image{
+             width:400px;
+             height:300px;
+         }
+         
+         
+        
+</style>
+<body>
+    <header></header>
+    <div id="container1">
+    <p class="login">Login</p>
+    <hr>
+    <div id=main>
+    <div class="vertical">
+    <form>
+        <label for="">Email</label>
+        <br>
+        <input type="text" id="email">
+        <br><br>
+        <label for="">Password</label>
+        <br>
+        <input type="text" id="password">
+    </form>
+    <div id="forgot">
+        <p>Forgot password?</p>
+    </div>
+    
+    <button>Continue</button>
+    <div id="char">
+        <p>Don't have an account yet?</p>
+        <a href="Register.html" class="reg"><p>REGISTER</p></a>
+    </div>
+    </div>
+   
+ <div class="box2">
+     
+    <img src="https://www.reliancedigital.in/medias/Umbrella-Offer-Desktop-Banner-1200x500-19-04-2022-01.jpg?context=bWFzdGVyfGltYWdlc3wxNTg5MTU2fGltYWdlL2pwZWd8aW1hZ2VzL2hlMy9oODEvOTgxNjE2NTE4NzYxNC5qcGd8OTBhMTdmZGFjOTU5Yjg4MDk1NDNkYjFhODA0MjA4YzgyODc5M2M2ZTBkNTQwZDk5NTI0ODRiMmU3NzRiYTlhMQ" alt="" class="image">
+    
+    </div>
+    </div>
+    </div>
+    <footer></footer>
+    
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",login);
+    var regduser=JSON.parse(localStorage.getItem("userdatabase"));
+    
+    function login(){
+        var email=document.querySelector("#email").value;
+
+        var password=document.querySelector("#password").value;
+
+        let user_found=false;
+        for(var i=0;i<regduser.length;i++){
+            if(regduser[i].emailId===email && regduser[i].pass===password){
+                user_found=true;
+                window.location.href="index.html";
+
+            }
+        }
+        if(user_found===false){
+        alert("wrong credientials");
+        }
+    }
+
+</script>
+<script type="module">
+    import {header,footer} from "./components/header_footer.js"
+    document.querySelector("header").innerHTML=header();
+    document.querySelector("footer").innerHTML=footer();
+    import headerFunctionality from "./scripts/header.js"
+    headerFunctionality()
+
+</script>

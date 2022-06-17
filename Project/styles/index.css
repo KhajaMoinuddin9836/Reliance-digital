@@ -1,0 +1,404 @@
+@media (min-width: 768px) {
+  body {
+    max-width: 100%;
+  }
+  hr {
+    opacity: 0.5;
+  }
+  .container * {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container > div {
+    width: 100%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    width: 97%;
+    margin: auto;
+  }
+  .heading {
+    font-size: 0.7cm;
+    margin: 3% 0 3% 1.5%;
+  }
+  .grid > img {
+    width: 100%;
+  }
+
+  .view {
+    color: blue;
+    font-size: 4mm;
+    font-weight: 600;
+  }
+
+  .flex {
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  .productHeading {
+    color: blue;
+    margin-bottom: 5%;
+  }
+
+  .grey {
+    color: grey;
+  }
+
+  span.price {
+    color: black;
+    font-size: 120%;
+    font-weight: 700;
+  }
+
+  span.mrpPrice {
+    text-decoration: line-through;
+  }
+  .offer {
+    color: green;
+    font-size: 70%;
+    border: 1px solid green;
+    display: inline;
+    padding: 0 2%;
+    border-radius: 25px;
+    font-weight: 700;
+  }
+  .midHeading {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  .div1 > img {
+    width: 100%;
+  }
+
+  .div2 > img {
+    width: 100%;
+  }
+  .div4 > .flex {
+    width: 98%;
+    margin: auto;
+  }
+  .div4 > div:nth-child(2) > div {
+    min-width: 20%;
+  }
+
+  .div4 > .flex > div img {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  .div6 {
+    margin-top: 6%;
+    margin-bottom: 2%;
+  }
+  .div8 {
+    background-color: rgb(247, 247, 247);
+    margin-top: 1%;
+    text-align: center;
+  }
+  .div8 .midHeading {
+    font-size: 150%;
+  }
+
+  .div8 > .flex {
+    overflow-x: scroll;
+  }
+  .div8 > .flex > div {
+    min-width: 20%;
+  }
+  .div8 > .flex > div img {
+    max-width: 50%;
+    margin: auto;
+  }
+
+  .div8 > .flex > div .grey {
+    margin-top: 20%;
+    font-size: 120%;
+    color: rgb(68, 68, 68);
+  }
+
+  .div8 button {
+    color: white;
+    background-color: blue;
+    width: 20%;
+    height: 25px;
+    border-radius: 25px;
+    border: 1px solid blue;
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+
+  .div8 button:hover {
+    color: blue;
+    background-color: white;
+  }
+
+  .div9 {
+    padding-bottom: 2%;
+  }
+
+  .div9 > .grid > div {
+    width: 100%;
+    justify-content: space-evenly;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+  }
+  .div9 > .grid > div > img {
+    max-width: 35%;
+    padding: 10px;
+  }
+
+  .div9 > .grid > div > .blue {
+    color: blue;
+    font-weight: 700;
+    font-size: 80%;
+  }
+
+  .div9 > .grid > div > .grey {
+    font-size: 60%;
+  }
+
+  .div9 > .midHeading {
+    color: blue;
+    font-size: 120%;
+    margin: 2%;
+  }
+
+  .left-image .grid2 {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+  }
+  .left-image .grid2 > div:first-child {
+    margin: auto;
+    min-width: 300px;
+  }
+  .left-image .flex {
+    width: 98%;
+    margin: auto;
+    overflow-x: scroll;
+  }
+  .left-image div:nth-child(2) > div {
+    min-width: 25%;
+    max-width: 100%;
+  }
+
+  .left-image .flex > div img {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 100%;
+  }
+  hr {
+    opacity: 0.5;
+  }
+  .container * {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container > div {
+    width: 100%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    width: 97%;
+    margin: auto;
+  }
+  .heading {
+    font-size: 0.4cm;
+    margin: 3% 0 3% 1.5%;
+  }
+  .grid > img {
+    width: 100%;
+  }
+
+  .view {
+    color: blue;
+    font-size: 2mm;
+    font-weight: 600;
+  }
+
+  .flex {
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  .productHeading {
+    color: blue;
+    margin-bottom: 5%;
+  }
+
+  .grey {
+    color: grey;
+  }
+
+  span.price {
+    color: black;
+    font-size: 80%;
+    font-weight: 700;
+  }
+
+  span.mrpPrice {
+    text-decoration: line-through;
+  }
+  .offer {
+    color: green;
+    font-size: 50%;
+    border: 1px solid green;
+    display: inline;
+    padding: 0 2%;
+    border-radius: 25px;
+    font-weight: 700;
+  }
+  .midHeading {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .grid2 {
+    display: grid;
+    width: 98%;
+    grid-template-columns: 1fr 78%;
+  }
+  .div1 > img {
+    width: 98%;
+  }
+
+  .div2 > img {
+    width: 97%;
+  }
+  .div4 > .flex {
+    width: 98%;
+    margin: auto;
+  }
+  .div4 > .flex > div {
+    min-width: 200px;
+  }
+
+  .div4 > .flex > div img {
+    max-width: 50%;
+    margin: auto;
+  }
+
+  .div6 {
+    margin-top: 6%;
+    margin-bottom: 2%;
+  }
+  .div8 {
+    background-color: rgb(247, 247, 247);
+    margin-top: 1%;
+    text-align: center;
+  }
+  .div8 .midHeading {
+    font-size: 80%;
+  }
+
+  .div8 > .flex {
+    overflow-x: scroll;
+  }
+  .div8 > .flex > div {
+    min-width: 49%;
+  }
+  .div8 > .flex > div img {
+    max-width: 49%;
+    margin: auto;
+  }
+
+  .div8 > .flex > div .grey {
+    margin-top: 20%;
+    font-size: 100%;
+    color: rgb(68, 68, 68);
+  }
+
+  .div8 button {
+    color: white;
+    background-color: blue;
+    width: 20%;
+    height: 25px;
+    border-radius: 25px;
+    border: 1px solid blue;
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+
+  .div8 button:hover {
+    color: blue;
+    background-color: white;
+  }
+
+  .div9 {
+    padding-bottom: 2%;
+  }
+
+  .div9 > .grid > div {
+    width: 100%;
+    justify-content: space-evenly;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+  }
+  .div9 > .grid > div > img {
+    max-width: 35%;
+    padding: 10px;
+  }
+
+  .div9 > .grid > div > .blue {
+    color: blue;
+    font-weight: 700;
+    font-size: 70%;
+  }
+
+  .div9 > .grid > div > .grey {
+    font-size: 60%;
+  }
+
+  .div9 > .midHeading {
+    color: blue;
+    font-size: 80%;
+    margin: 0%;
+  }
+
+  .left-image .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .left-image .grid2 > div:first-child {
+    margin: auto;
+    width: 100%;
+  }
+  .left-image .grid2 > div:first-child > img {
+    width: 100%;
+  }
+  .left-image .flex {
+    width: 98%;
+    margin: auto;
+    overflow-x: scroll;
+  }
+  .left-image .flex > div {
+    min-width: 50%;
+  }
+
+  .left-image .flex > div img {
+    max-width: 80%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliance Digital</title>
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <style>
+      
+      
+        
+        #chkt{
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 8px;
+            
+        }
+        #checkout{
+            width: 400px;
+            border: 1px solid black;
+            margin-left: 350px;
+        }
+        p{
+            color: #818b96;
+        }
+        #Ap{
+            background-color: blue;
+            border: none;
+            color: wheat;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <div id="cart">
+       
+
+      
+
+        <div id="checkout">
+            <div id="btn">
+                <a href="./payment.html"><button id="chkt">CHECKOUT</button></a>
+                
+                <div id="details">
+                    <input type="text" id="Coupon" placeholder="Coupon Code">
+                    <button id="Ap">Apply</button>
+                    <h4>PRICE DETAILS</h4>
+                    
+                    <p>Delivery Charges</p>
+                    <p>Free</p>
+                    <hr>
+                    <h4 id="totamount">AMOUNT PAYABLE</h4>  
+                </div>
+                <div>
+                    <p>Safe and Secure Payments. Easy returns. 100% Authentic products.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer></footer>
+</body>
+</html>
+
+<script type="module">
+
+    import {footer,header} from "./components/header_footer.js"
+    let container=document.getElementById("container")
+    container.innerHTML=header()
+    let foot=document.querySelector("footer")
+    foot.innerHTML=footer()
+
+    import headerFunctionality from "./scripts/header.js"
+headerFunctionality();
+
+let items=JSON.parse(localStorage.getItem("relianceCart"))
+
+ console.log(items)
+
+
+appendcart(items)
+
+function appendcart(el){
+     
+    
+        let div=document.createElement("div")
+        let img=document.createElement("img")
+        img.src=el.image
+        img.style.width="250px"
+        
+        let name=document.createElement("p")
+        name.innerHTML=el.name
+        let price=document.createElement("p")
+        price.innerText=el.price
+        let p=document.createElement("p")
+        p.innerText="*Delivery assurance is subject to our delivery locations staying open as per govt. regulations"
+        
+        div.append(img,name,price,p)
+
+let parent=document.getElementById("container");
+parent.append(div)
+    
+}
+
+let amount=document.getElementById("totamount")
+amount.innerText=items.price
+
+
+
+
+
+
+    
+</script>

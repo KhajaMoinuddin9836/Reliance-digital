@@ -1,0 +1,811 @@
+body {
+    margin: 0;
+    font-family: 'Roboto';
+    background-color: #FFFFFF;
+  }
+  
+  /* section name bar code starts  */
+  #sectionNameBar {
+    display: flex;
+    border: 1px solid #f9f9fa;
+    border-bottom: 1px solid #e0e0e1;
+    height: 18px;
+    padding: 5px 10px;
+    background-color: #f9f9fa;
+    
+  }
+  .fas{
+      color: black;
+      margin-right: 10px;
+  }
+  label{
+      padding: 0px 5px;
+      font-size: 13px;
+      text-align: center;
+  }
+  .brandNamesc{
+      padding: 0px 5px;
+      font-size: 13px;
+      text-align: center;  
+  }
+
+  #mobDetailsBox{
+      display: flex;
+      border: none;
+      border-bottom: 1px solid rgba(175, 172, 172, 0.493);
+      height: 800px;
+  }
+  #mobileImages{
+      border: 1px solid white;
+      width: 830px;
+      height: 660px;
+      padding: 0px 15px;
+  }
+  .deviceimage{
+      border: 1px solid white;
+      height: 510px;
+      text-align: center;
+  }
+  .myimage{
+      height: 100%;
+  }
+  .smallimgDiv{
+      border: 1px solid white;
+      height: 120px;
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+  }
+  .prev{
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(168, 167, 167, 0.527) ;
+    padding: 32px 8px;
+    font-size: 32px;
+    color: black;
+    
+  }
+  #img1{
+    /* border: 1px solid #FFFFFF; */
+    width: 183px;
+    height: 98px;
+    cursor: pointer;
+    /* margin-left: 1px; */
+  }
+  .smallimgDiv div img{
+    width: 50;
+    height: 100%;
+  }
+  .smallimgDiv div{
+    text-align: center;
+  }
+  
+  .next{
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(168, 167, 167, 0.527) ;
+    padding: 32px 8px;
+    font-size: 32px;
+    color: black;
+  }
+  #test{
+    border: 1px solid white;
+    width: 130px;
+    height: 80px;
+    text-align: center;
+    margin-top: 1px;
+    border-right:1px solid #ddd;
+  }
+  #playbtn{
+    width:40px;
+    margin-top: 9px;
+    /* border: 1px solid red; */
+  }
+  #vslide{
+    color: #666666;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 0px;
+  }
+  #detailsDiv{
+      border: 1px solid white;
+      width: 1227px;
+      height: 94%;
+      padding: 0px 20px;
+  }
+  #articleID{
+      color: #666666;
+      font-size: 14px;
+  }
+  #deviceName{
+      color: #333333;
+      font-size: 19px;
+      font-weight: bold;
+      letter-spacing: 1px;
+  }
+  .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Hide the browser's default checkbox */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border: 1px solid grey;
+      
+    }
+     
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: navy;
+    }
+    
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+      left: 5px;
+      top: 1px;
+      width: 3px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    #addComp{
+        font-size: 14px;
+        margin-left: 25px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+    #bar{
+        margin-left: 5px;
+        margin-right: 8px;
+        font-size: 18px;
+    }
+    .share{
+        color: #337AB7;
+        font-size: 18px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    #print{
+        color: #337AB7;
+        cursor: pointer;
+    }
+    #hline1{
+        border: none;
+        border-bottom: 1px solid #ddd;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    #gainMore{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #offers{
+        color: #585757;
+        word-spacing: 2px;
+        line-height: 28px;
+    }
+    #tc{
+      color: #337AB7;
+    }
+    #tc:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    #seeMore{
+        font-size: 13px;
+        color: #337AB7;
+        word-spacing: 2px;
+        font-weight: bold;
+    }
+    #seeMore:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    #saveMore{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #svtc{
+      color: #337AB7;
+      font-weight: normal;
+      font-size: 14px;
+    }
+    #svtc:hover{
+      cursor: pointer;
+      text-decoration: underline; 
+    }
+    #payOffers{
+      color: #585757;
+      word-spacing: 2px;
+      line-height: 28px;
+      width: 580px;
+    }
+    #viewPlans{
+      color: #337AB7;
+    }
+    #viewPlans:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    #wrnty{
+        font-weight: bold;
+        color: #585757;
+    }
+    #nrmlFont{
+        font-weight: normal;
+    }
+    #addWaranty{
+      font-size: 18px;
+      font-weight: bold;
+    }
+    #checkbox{
+        border: 1px solid white;
+        display: flex;
+        margin-top: 0px;
+    }
+    #mrpDiv{
+        border: 1px solid white;
+        width: 547px;
+        padding-left: 25px ;
+        border-left:1px solid #ddd;
+        margin-left: 40px;
+    }
+    #price{
+        color: #1F4985;
+        font-weight: bolder;
+        font-size: 26px;
+    }
+    #EMIs{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #freeShip{
+        font-weight: 900;
+    }
+    #pinCode{
+        border: 1px solid ;
+        border-color: #ddd;
+        width: 380px;
+        height: 26px;
+        border-radius: 4px;
+        padding: 8px 16px;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    .map{
+        position: absolute;
+        margin-top: 39px;
+        margin-left: 390px;     
+    }
+    #addtoCart{
+        padding: 15px 70px;
+        background-color: #E42529;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 15px;
+        
+    }
+    #addtoCart:hover{
+      background-color: #1F4985;
+      cursor: pointer;
+    }
+    #buyNow{
+      padding: 16px 85px;
+      background-color: #FC6027;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 15px;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    #butDiv{
+      display: flex;
+      gap: 15px;
+    }
+    #butDiv div{
+        /* border: 1px solid red; */
+        padding: 12px 0px 0px 15px;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    #butDiv div:hover{
+        border-top: 3px solid #337AB7;
+    }
+    #divforFlex{
+        display: flex;
+    }
+    #mobilePhotos{
+      border: 1px solid white;
+      padding: 0px 15px;
+      width: 74%;
+      height: 16575px;
+    }
+    #otherOffers{
+      border: 1px solid white;
+      width: 24%;
+      padding: 0px 15px;
+    }
+    #blktext{
+        font-weight: 900;
+        color: #575757;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+    }
+    #imgone{
+        border: 1px solid white;
+        margin: auto;
+        width: 790px;
+        height: 460px;
+    }
+    #imgone img{
+        width: 100%;
+    }
+    #lillustrationimg{
+        text-align: center;
+        margin-top: 0px;
+        color: #575757;
+    }
+    #imgTwo{
+      border: 1px solid white;
+      margin: auto;
+      width: 790px;
+      height: 470px;
+    }
+    #imgTwo img{
+      width: 100%;
+    }
+    #imgThree{
+      border: 1px solid white;
+      margin: auto;
+      width: 790px;
+      height: 470px;
+      
+    }
+    #imgThree img{
+      width: 100%;
+    }
+    #imgFour{
+      border: 1px solid white;
+      margin: auto;
+      width: 295px;
+      height: 433px;
+      margin-bottom: 5px;
+      
+    }
+    #imgFour img{
+      width: 100%;
+    }
+    #imgFive{
+      border: 1px solid white;
+      margin: auto;
+      width: 1220px;
+      height: 470px;
+      
+    }
+    #imgFive img{
+      width: 100%;  
+    }
+    #imgSix{
+      border: 1px solid white;
+      margin: auto;
+      width: 306px;
+      height: 400px;
+      margin-bottom: 5px;   
+    }
+    #imgSeven{
+      border: 1px solid white;
+      margin: auto;
+      width: 306px;
+      height: 400px;
+      margin-bottom: 5px;   
+    }
+    #imgEight{
+      border: 1px solid white;
+      margin: auto;
+      width: 685px;
+      height: 430px;  
+    }
+    
+    #imgNine{
+      border: 1px solid white;
+      margin: auto;
+      width: 654px;
+      height: 430px;  
+    }
+    #imgTen{
+      border: 1px solid white;
+      margin: auto;
+      width: 675px;
+      height: 430px;  
+    }
+    #imgEleven{
+      border: 1px solid white;
+      margin: auto;
+      width: 420px;
+      height: 460px;  
+    }
+    #imgEleven img{
+      width: 100%;
+      height: 100%
+    }
+    #imgTwelve{
+      border: 1px solid white;
+      margin: auto;
+      width: 415px;
+      height: 450px;  
+      margin-top: 60px;
+  
+    }
+    #imgTwelve img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgThirteen{
+      border: 1px solid white;
+      margin: auto;
+      width: 425px;
+      height: 450px;  
+      margin-top: 60px;
+  
+    }
+    #imgThirteen img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgFourteen{
+      border: 1px solid white;
+      margin: auto;
+      width: 425px;
+      height: 450px;  
+      margin-top: 60px;
+    }
+    #imgFourteen img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgFifthteen{
+      border: 1px solid white;
+      margin: auto;
+      width: 425px;
+      height: 450px;  
+      margin-top: 60px;
+    }
+    #imgFifthteen img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgSixteen{
+      border: 1px solid white;
+      margin: auto;
+      width: 625px;
+      height: 420px;  
+    }
+    #imgSixteen img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgSeventeen{
+      border: 1px solid white;
+      margin: auto;
+      width: 570px;
+      height: 440px;  
+    }
+    #imgSeventeen img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgEighteen{
+      border: 1px solid white;
+      margin: auto;
+      width: 360px;
+      height: 465px;  
+      margin-top: 60px;
+    }
+    #imgEighteen img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgNineteen{
+      border: 1px solid white;
+      margin: auto;
+      width: 570px;
+      height: 440px;  
+    }
+    #imgNineteen img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwenty{
+      border: 1px solid white;
+      margin: auto;
+      width: 320px;
+      height: 440px;  
+    }
+    #imgTwenty img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwentyone{
+      border: 1px solid white;
+      margin: auto;
+      width: 760px;
+      height: 440px; 
+      margin-top: 60px; 
+    }
+    #imgTwentyone img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwentytwo{
+      border: 1px solid white;
+      margin: auto;
+      width: 330px;
+      height: 440px;  
+    }
+    #imgTwentytwo img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwentythree{
+      border: 1px solid white;
+      margin: auto;
+      width: 630px;
+      height: 440px;  
+    }
+    #imgTwentythree img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwentyfour{
+      border: 1px solid white;
+      margin: auto;
+      width: 730px;
+      height: 440px;  
+    }
+    #imgTwentyfour img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwentyfive{
+      border: 1px solid white;
+      margin: auto;
+      width: 590px;
+      height: 440px;  
+    }
+    #imgTwentyfive img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwentysix{
+      border: 1px solid white;
+      margin: auto;
+      width: 750px;
+      height: 440px;  
+    }
+    #imgTwentysix img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwentyseven{
+      border: 1px solid white;
+      margin: auto;
+      width: 790px;
+      height: 440px;  
+    }
+    #imgTwentyseven img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwentyeight{
+      border: 1px solid white;
+      margin: auto;
+      width: 790px;
+      height: 440px;  
+    }
+    #imgTwentyeight img{
+      width: 100%;
+      height: 100%;
+    }
+    #imgTwentynine{
+      border: 1px solid white;
+      margin: auto;
+      width: 690px;
+      height: 440px;  
+    }
+    #imgTwentynine img{
+      width: 100%;
+      height: 100%;
+    }
+    #hline2{
+      border: none;
+      border-bottom: 1px solid #ddd;
+      margin-top: 50px;
+      margin-bottom: 0px;
+    }
+
+    /* side offer bar */
+    #otherOffers{
+      border: 1px solid white;
+    }
+    #offertitle{
+      padding: 12px 16px;
+      background-color: #EFEFEF;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      color: #333333;
+      letter-spacing: 1px;
+      word-spacing: 1.5px;
+    }
+    #offersrand{
+      border: 1px solid #EFEFEF;
+      margin-top: 10px;
+      padding: 0px 25px 25px;
+      
+    }
+    #adjoffimg{
+      text-align: center;
+    }
+    #greytext{
+      color: #666666;
+      line-height: 5px;
+    }
+    #bigbcktxt{
+      font-size: 18px;
+      color: #000000;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    #dashtxt{
+      text-decoration:line-through;
+    }
+
+    /* specification detailed code start here */
+    #leftmarginspecdiv{
+        margin-left: 20px;
+        border: 1px solid white;
+        margin-top: 0px;
+        /* border-bottom: 1px solid #ddd; */
+        
+    }
+     
+    #gInfoDiv{
+      display: flex;  
+
+    }
+    #detailblktext{
+        font-size: 17px;
+        font-weight: bold;
+        color: #575757;
+        line-height: 0px;
+        
+    }
+    #details{
+        display: flex;
+        border: 1px solid white;
+    }
+    #key{
+        border: 1px solid white;
+        width: 790px;
+        color: #575757;
+        font-size: 17px;
+        line-height: 18px;
+
+    }
+    #value{
+        border: 1px solid white;
+        /* margin-left: 750px; */
+        color: #575757;
+        line-height: 18px;
+        font-size: 17px;
+    }
+    #lesslinegap{
+        line-height: 5px;
+    }
+    #wrntyGap{
+        margin-top: 55px;
+    }
+    #ccphone{
+        margin-top: 23px;
+        margin-bottom: 0px;
+    }
+    #adrsimporter{
+        margin-top: 70px;
+    }
+    #lesslinegapE{
+        line-height: 5px;
+        margin-top: 25px;
+    }
+    #lesslinegaped{
+        line-height: 8px;
+    }
+    #customerRev{
+        display: flex;
+    }
+    #cstrevtag{
+        margin-left: 20px;
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: 1px;
+        color: #333333;
+        margin-top: 43px;
+    }
+    #writerevbtn{
+        padding: 0px 12px;
+        height: 40px;
+        margin-top: 40px;
+        margin-left: 40px;
+        background-color: white;
+        border-radius: 4px;
+        border-color: #E42529;
+        color: #E42529;
+        font-weight: bold;
+
+    }
+    #writerevbtn:hover{
+        cursor: pointer;
+        color: #FC6027;
+        border-color: #FC6027;
+    }
+    #detailSpec{
+        font-size: 22px;
+        font-weight: 500;
+        color: #333333;
+        margin-top: 0px;
+    }
+    .blktext{
+        font-weight: 900;
+        color: #575757;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+    }
+  
+    
+  
+  
+  /* code for Mobile details box ends  */
+  
